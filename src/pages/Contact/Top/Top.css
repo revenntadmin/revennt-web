@@ -1,0 +1,135 @@
+.join_us_page_top_banner_div {
+    height: 80vh;
+    background-color: #F8F9FA;
+    /* border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%; */
+    overflow: hidden;
+    position: relative;
+
+    z-index: 20s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#other_page_contact_margin {
+    margin-top: 0px;
+}
+
+.contact_header {
+    margin: 0px;
+    margin-top: 100px;
+    width: 700px;
+    color: rgb(59, 59, 59);
+}
+
+.ConstactUsForm {
+    margin-top: 50px;
+    width: 700px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact_form_row_div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+.contact_form_indiv_div {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 40px;
+}
+
+.contact_form_indiv_div input {
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    border: 1px solid gray;
+    padding: 0px 30px;
+    font-size: 18px;
+}
+
+#message {
+    width: 100%;
+    min-height: 80px;
+    max-height: 150px;
+    border-radius: 20px;
+    border: 1px solid gray;
+    padding: 20px 30px;
+    font-size: 18px;
+}
+
+.submit_form {
+    cursor: pointer;
+
+    margin-top: 20px;
+
+    width: 500px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #335886;
+    font-size: 18px;
+    background-color: #335886;
+    transition: .4s;
+}
+
+.submit_form:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: #335886;
+}
+
+@media screen and (max-width: 800px) {
+    .contact_header {
+        width: 550px;
+    }
+
+    .ConstactUsForm {
+        width: 550px;
+    }
+
+    .submit_form {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact_header {
+        margin-top: 30px;
+        width: 400px;
+    }
+
+    .ConstactUsForm {
+        width: 400px;
+    }
+
+    .submit_form {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .contact_header {
+        margin-top: 80px;
+        width: 340px;
+    }
+
+    .ConstactUsForm {
+        width: 340px;
+    }
+
+    .contact_form_indiv_div {
+        gap: 10px;
+    }
+
+    .submit_form {
+        width: 200px;
+    }
+}

@@ -1,0 +1,63 @@
+.upcoming_events_top_div {
+    background-color: #91cfe9;
+}
+
+.upcoming_events_top_div h1 {
+    margin-bottom: 60px;
+}
+
+.upcoming_events_div {
+    margin: 150px 10%;
+    margin-bottom: 0px;
+    padding-bottom: 120px;
+}
+
+.upcoming_events_p {
+    font-size: 30px;
+    margin-bottom: 80px;
+    color: rgb(63, 63, 63);
+    font-weight: bold;
+}
+
+.upcoming_events_all_div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    row-gap: 40px;
+}
+
+.upcoming_events_indiv_event_div {
+    position: relative;
+    top: 0px;
+    transition: .6s;
+    width: 350px;
+    /* box-shadow: 0px 0px 39px rgba(0, 0, 0, 0.15); */
+    border-radius: 10px;
+    overflow: hidden;
+    /* background-color: white; */
+}
+
+.upcoming_events_indiv_event_div:hover {
+    top: -20px;
+}
+
+.upcoming_events_indiv_event_div a {
+    text-decoration: none;
+}
+
+
+.upcoming_events_indiv_event_details p {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.no_upcoming_events {
+    text-align: center;
+    width: 100%;
+}
+
+.no_upcoming_events p {
+    font-style: italic;
+}

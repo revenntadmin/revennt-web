@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Saira');
+
+body {
+  margin: 0px;
+}
+
+p {
+  line-height: 22px;
+}
+
+.all_div_margin {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+@media screen and (max-width: 625px) {
+  .all_div_margin {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .all_div_margin {
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+  }
+}
+
+.all_div_margin_all_news {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+@media screen and (max-width: 625px) {
+  .all_div_margin_all_news {
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .all_div_margin_all_news {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
+
+
+.Saira_Regular_White {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: normal;
+  color: #FFFFFF;
+}
+
+.Saira_Medium_White {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.Saira_Bold_White {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.Saira_Regular_Black {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: normal;
+  color: #212121;
+}
+
+.Saira_Medium_Black {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: 500;
+  color: #212121;
+}
+
+.Saira_Bold_Black {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: 600;
+  color: #212121;
+}
+
+.Saira_Regular_LGray {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: normal;
+  color: #616161;
+}
+
+.Saira_Medium_LGray {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: 500;
+  color: #616161;
+}
+
+.Saira_Bold_LGray {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: 600;
+  color: #616161;
+}
+
+.Saira_Regular_Gray {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: normal;
+  color: #4F4F4F;
+}
+
+.Saira_Medium_Gray {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: 500;
+  color: #4F4F4F;
+}
+
+.Saira_Bold_Gray {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: 600;
+  color: #4F4F4F;
+}
+
+.Saira_Regular_DGray {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: normal;
+  color: #424242;
+}
+
+.Saira_Medium_DGray {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: 500;
+  color: #424242;
+}
+
+.Saira_Bold_DGray {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: 600;
+  color: #424242;
+}
+
+
+
+.Saira_Regular_Red {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: normal;
+  color: #AD2225;
+}
+
+.Saira_Medium_Red {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: 500;
+  color: #AD2225;
+}
+
+.Saira_Bold_Red {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: 600;
+  color: #AD2225;
+}
+
+.fixed_width {
+  max-width: 1400px;
+}

@@ -1,0 +1,77 @@
+.donate_page_top_banner_div {
+    height: 550px;
+    background-color: #f9f8f4;
+}
+
+.donate_page_top_banner_div h1 {
+    margin: 0px;
+    padding-top: 170px;
+    padding-bottom: 90px;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(81, 81, 81);
+}
+
+.donate_page_top_img_all_div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.donate_page_top_img_left {
+    width: 400px;
+    opacity: 0;
+    transform: translateX(-100px);
+    /* Initial position */
+    animation: fadeInLeft 1s ease forwards;
+}
+
+.donate_page_top_img_right {
+    width: 400px;
+    opacity: 0;
+    transform: translateX(100px);
+    /* Initial position */
+    animation: fadeInRight 1s ease forwards;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+        /* Start from right */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        /* Move to original position */
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+        /* Start from right */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        /* Move to original position */
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .donate_page_top_banner_div {
+        height: 520px;
+    }
+
+    .donate_page_top_img_left {
+        width: 360px;
+    }
+
+    .donate_page_top_img_right {
+        display: none;
+    }
+}
