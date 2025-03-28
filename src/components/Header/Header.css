@@ -148,7 +148,10 @@
 
 @media screen and (max-width: 1200px) {
     .nav_body {
-        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* padding-top: 10px; */
         height: 60px;
         width: 80%;
     }

@@ -4,12 +4,14 @@ import './Home.css';
 import HomeTop from './Top/Top';
 
 function Home() {
+    console.log('here')
+
     return (
-        <div className='home_top_div Saira_Medium_DGray'>
+        < div className='home_top_div Saira_Medium_DGray' >
             <HomeTop />
             <HomeBody />
             <ContactTop contact_page={false} />
-        </div>
+        </div >
     );
 }
 

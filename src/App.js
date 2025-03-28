@@ -3,10 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import Home from './pages/Home/Home.js';
 import Error from './pages/404Page/404Page'
 import Header from './components/Header/Header';
-import Contact from './pages/Contact/Contact';
-import UpcomingEvents from './pages/UpcomingEvents/UpcomingEvents';
-import Donate from './pages/Donate/Donate';
-import emailjs from 'emailjs-com';
 
 
 // Import the functions you need from the SDKs you need
@@ -38,7 +34,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Header />}>
-          <Route path="/" element={<Home />} />
+          <Route index element={<Home />} />
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>
