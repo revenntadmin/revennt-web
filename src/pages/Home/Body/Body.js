@@ -80,13 +80,13 @@ function HomeBody() {
             <div className='home_events_div' id='apps'>
                 <div className='home_events_inner_div'>
                     <div className={`home_mission_img_text_animation home_events_header_text_div ${isVisible3 ? 'visible' : ''}`} id="transition-object-3">
-                        <p className='home_events_header'>Meal Planner AI</p>
+                        <p className='home_events_header'>PrepWize</p>
 
                         <p className='home_events_text'>
-                            Meal Planner AI is a smart meal-tracking app that provides in-depth analytics on your nutrition, meal costs, and weight projections based on activity level. It breaks down each meal’s calories, protein, fat, potassium, and other key nutrients, helping you understand your diet in detail. With AI-powered insights, the app personalizes recommendations based on your dietary preferences, fitness goals, and health needs.
+                            PrepWize is a smart meal-tracking app that provides in-depth analytics on your nutrition, meal costs, and weight projections based on activity level. It breaks down each meal’s calories, protein, fat, potassium, and other key nutrients, helping you understand your diet in detail. With AI-powered insights, the app personalizes recommendations based on your dietary preferences, fitness goals, and health needs.
                             <br />
                             <br />
-                            In addition to tracking nutrients, Meal Planner AI calculates the cost of each meal, allowing you to manage your budget while maintaining a balanced diet. Its AI-driven analysis ensures your meals align with your health objectives, whether you’re aiming to lose weight, build muscle, or maintain a healthy lifestyle.
+                            In addition to tracking nutrients, PrepWize calculates the cost of each meal, allowing you to manage your budget while maintaining a balanced diet. Its AI-driven analysis ensures your meals align with your health objectives, whether you’re aiming to lose weight, build muscle, or maintain a healthy lifestyle.
                         </p>
                     </div>
 
