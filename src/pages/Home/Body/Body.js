@@ -69,7 +69,15 @@ function HomeBody() {
 
                             <div className='home_mission_img_text_animation'>
                                 <p>
-                                    At Revennt, we are dedicated to building innovative, user-centric applications that empower businesses and individuals to achieve more. Our mission is to harness the power of cutting-edge technology to create intuitive, scalable, and secure digital solutions tailored to our clients' unique needs.
+                                    Revennt LLC is a technology company driven by a simple goal: create meaningful digital solutions that genuinely improve people’s lives. We believe technology should work for people—not the other way around—so every product we design starts with real-world challenges and ends with tools that are intuitive, accessible, and impactful.
+                                    <br />
+                                    <br />
+
+                                    Our focus is on AI-powered applications that merge smart technology with exceptional user experience. Whether it’s helping individuals make healthier choices or enabling them to save time and money, our products are built to deliver real value without unnecessary complexity.
+                                    <br />
+                                    <br />
+
+                                    At Revennt, innovation is not just about being at the cutting edge—it’s about creating technology that makes a difference.
                                 </p>
                             </div>
                         </div>
@@ -83,11 +91,32 @@ function HomeBody() {
                         <p className='home_events_header'>PrepWize</p>
 
                         <p className='home_events_text'>
-                            PrepWize is a smart meal-tracking app that provides in-depth analytics on your nutrition, meal costs, and weight projections based on activity level. It breaks down each meal’s calories, protein, fat, potassium, and other key nutrients, helping you understand your diet in detail. With AI-powered insights, the app personalizes recommendations based on your dietary preferences, fitness goals, and health needs.
-                            <br />
-                            <br />
-                            In addition to tracking nutrients, PrepWize calculates the cost of each meal, allowing you to manage your budget while maintaining a balanced diet. Its AI-driven analysis ensures your meals align with your health objectives, whether you’re aiming to lose weight, build muscle, or maintain a healthy lifestyle.
+                            PrepWize takes the guesswork out of healthy eating. Using AI, it creates personalized meal plans based on your goals, preferences, and budget. With over 500 dietitian-approved recipes, advanced nutrition tracking, a photo-based food scanner, and real-time guidance, PrepWize helps you eat better, save time, and stay on budget — all in one easy-to-use app.
                         </p>
+
+                        <div className='prepwize_buttons_div'>
+                            <a
+                                href="https://apps.apple.com/us/app/prepwize-ai-meal-planner/id6744729394"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className='prepwize_appstore_button'
+                            >
+                                <img
+                                    src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                                    alt="Download on the App Store"
+                                    className='appstore_badge'
+                                />
+                            </a>
+
+                            <a
+                                href="https://prepwize.ai"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className='prepwize_landing_button'
+                            >
+                                Visit PrepWize
+                            </a>
+                        </div>
                     </div>
 
                     <div className='home_events_img_carousel_outer_div'>
