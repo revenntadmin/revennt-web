@@ -1,44 +1,33 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router";
-import Home from './pages/Home/Home.js';
-import Error from './pages/404Page/404Page'
 import Header from './components/Header/Header';
-
-
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyDFF6GV7c9X-7u0l1CyvoUB20KRZkL23xU",
-  authDomain: "revennt-e5965.firebaseapp.com",
-  projectId: "revennt-e5965",
-  storageBucket: "revennt-e5965.firebasestorage.app",
-  messagingSenderId: "263001763030",
-  appId: "1:263001763030:web:ead98b767a51ee94f66d77",
-  measurementId: "G-LM3KFFWJ3J"
-};
-
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+import Hero from './components/Hero/Hero';
+import Services from './components/Services/Services';
+import Features from './components/Features/Features';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
+import Legal from './components/Legal/Legal';
 
 function App() {
-
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Header />}>
-          <Route index element={<Home />} />
-          <Route path="*" element={<Error />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Hero />
+              <Services />
+              <Features />
+              <Contact />
+            </>
+          } />
+          <Route path="/legal" element={<Legal />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
