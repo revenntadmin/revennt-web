@@ -1,11 +1,32 @@
 import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
+
     const scrollToSection = (sectionId) => {
         const element = document.getElementById(sectionId);
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+            // Add a small delay to ensure the element is rendered
+            setTimeout(() => {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                    inline: 'nearest'
+                });
+            }, 100);
+        }
+    };
+
+    const navigateToSection = (sectionId) => {
+        // If we're on the home page, scroll to section
+        if (location.pathname === '/') {
+            scrollToSection(sectionId);
+        } else {
+            // If we're on another page, navigate to home page with hash
+            navigate(`/#${sectionId}`);
         }
     };
 
@@ -28,19 +49,17 @@ const Footer = () => {
                         <div className="footer-column">
                             <h4>Services</h4>
                             <ul>
-                                <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Enterprise AI</a></li>
-                                <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Team AI</a></li>
-                                <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Individual AI</a></li>
-                                <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Custom Solutions</a></li>
+                                <li><a href="#services" onClick={(e) => { e.preventDefault(); navigateToSection('services'); }}>Enterprise AI</a></li>
+                                <li><a href="#services" onClick={(e) => { e.preventDefault(); navigateToSection('services'); }}>Team AI</a></li>
+                                <li><a href="#services" onClick={(e) => { e.preventDefault(); navigateToSection('services'); }}>Individual AI</a></li>
                             </ul>
                         </div>
 
                         <div className="footer-column">
-                            <h4>Legal</h4>
+                            <h4>Why Revennt AI?</h4>
                             <ul>
-                                <li><a href="/legal">Privacy Policy</a></li>
-                                <li><a href="/legal">Terms of Service</a></li>
-                                <li><a href="/legal">Security</a></li>
+                                <li><a href="#features" onClick={(e) => { e.preventDefault(); navigateToSection('features'); }}>AI Agents</a></li>
+                                <li><a href="#contact" onClick={(e) => { e.preventDefault(); navigateToSection('contact'); }}>Get Started</a></li>
                             </ul>
                         </div>
                     </div>

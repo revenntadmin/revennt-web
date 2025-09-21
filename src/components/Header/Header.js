@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const location = useLocation();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -19,7 +20,7 @@ const Header = () => {
     const scrollToSection = (sectionId) => {
         if (location.pathname !== '/') {
             // If not on home page, navigate to home first
-            window.location.href = `/#${sectionId}`;
+            navigate(`/#${sectionId}`);
             return;
         }
         const element = document.getElementById(sectionId);
@@ -52,9 +53,6 @@ const Header = () => {
                         <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }} className="nav-link">
                             Contact
                         </a>
-                        <Link to="/legal" className="nav-link">
-                            Legal
-                        </Link>
                         <button className="btn btn-primary nav-cta" onClick={() => scrollToSection('contact')}>
                             Get Started
                         </button>

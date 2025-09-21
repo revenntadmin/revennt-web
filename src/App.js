@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
@@ -9,23 +9,51 @@ import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import Legal from './components/Legal/Legal';
 
+function AppContent() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Handle hash scrolling when navigating from other pages
+    if (location.hash) {
+      const elementId = location.hash.substring(1); // Remove the # symbol
+      const element = document.getElementById(elementId);
+      if (element) {
+        // Add a small delay to ensure the element is rendered
+        setTimeout(() => {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+          });
+        }, 100);
+      }
+    }
+  }, [location]);
+
+  return (
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Hero />
+            <Services />
+            <Features />
+            <Contact />
+          </>
+        } />
+        <Route path="/legal" element={<Legal />} />
+      </Routes>
+      <Footer />
+    </>
+  );
+}
+
 function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <Services />
-              <Features />
-              <Contact />
-            </>
-          } />
-          <Route path="/legal" element={<Legal />} />
-        </Routes>
-        <Footer />
+        <AppContent />
       </div>
     </Router>
   );
