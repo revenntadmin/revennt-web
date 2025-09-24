@@ -152,7 +152,7 @@ const Services = () => {
                 <div className="services-cta">
                     <h3>Ready to See It in Action?</h3>
                     <p>Schedule a personalized demo to see how our AI agents can transform your specific workflows.</p>
-                    <button className="btn btn-primary"><a href='https://calendly.com/revennt-llc/30min' target='_blank'>Schedule Demo</a></button>
+                    <a href='https://calendly.com/revennt-llc/30min' target='_blank' className="btn btn-primary">Schedule Demo</a>
                 </div>
             </div>
         </section>
