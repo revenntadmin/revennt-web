@@ -8,6 +8,7 @@ import Features from './components/Features/Features';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import Legal from './components/Legal/Legal';
+import Chatbot from './components/Chatbot/Chatbot';
 
 function AppContent() {
   const location = useLocation();
@@ -45,6 +46,7 @@ function AppContent() {
         <Route path="/legal" element={<Legal />} />
       </Routes>
       <Footer />
+      <Chatbot />
     </>
   );
 }
