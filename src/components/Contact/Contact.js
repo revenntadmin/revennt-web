@@ -207,14 +207,14 @@ const Contact = () => {
                                 </li>
                                 <li>
                                     <div>
-                                        <strong>Enterprise Security</strong>
-                                        <p>Bank-level security and compliance</p>
+                                        <strong>Secure</strong>
+                                        <p>Can be run locally or on cloud for maximum control and security</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
-                                        <strong>Proven ROI</strong>
-                                        <p>Average 40% efficiency improvement</p>
+                                        <strong>Customizable Solutions</strong>
+                                        <p>Transform existing workflows by addressing business or personal needs through customization</p>
                                     </div>
                                 </li>
                             </ul>

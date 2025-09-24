@@ -36,8 +36,8 @@ const Footer = () => {
                 <div className="footer-content">
                     <div className="footer-brand">
                         <div className="footer-logo">
-                            <img src="/logo.png" alt="Revennt AI" className="logo" />
-                            <span className="brand-text">Revennt AI</span>
+                            <img src="/logo.png" alt="Revennt" className="logo" />
+                            <span className="brand-text">Revennt</span>
                         </div>
                         <p className="footer-description">
                             Transforming businesses with intelligent AI agents.
@@ -56,7 +56,7 @@ const Footer = () => {
                         </div>
 
                         <div className="footer-column">
-                            <h4>Why Revennt AI?</h4>
+                            <h4>Why Revennt?</h4>
                             <ul>
                                 <li><a href="#features" onClick={(e) => { e.preventDefault(); navigateToSection('features'); }}>AI Agents</a></li>
                                 <li><a href="#contact" onClick={(e) => { e.preventDefault(); navigateToSection('contact'); }}>Get Started</a></li>
@@ -67,7 +67,7 @@ const Footer = () => {
 
                 <div className="footer-bottom">
                     <div className="footer-copyright">
-                        <p>&copy; 2025 Revennt AI. All rights reserved.</p>
+                        <p>&copy; 2025 Revennt. All rights reserved.</p>
                     </div>
                     <div className="footer-bottom-links">
                         <a href="/legal">Privacy</a>
