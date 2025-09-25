@@ -3,8 +3,14 @@ import './Chatbot.css';
 
 // Utility function to detect URLs and emails in text
 const detectLinksAndEmails = (text) => {
+    // Enhanced URL regex that captures URLs but excludes trailing punctuation
     const urlRegex = /(https?:\/\/[^\s]+)/g;
     const emailRegex = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
+
+    // Function to clean URL by removing trailing punctuation
+    const cleanUrl = (url) => {
+        return url.replace(/[.,;:!?)\]}>\s]+$/, '');
+    };
 
     const parts = [];
     let lastIndex = 0;
@@ -15,9 +21,10 @@ const detectLinksAndEmails = (text) => {
     // Find URLs
     let match;
     while ((match = urlRegex.exec(text)) !== null) {
+        const cleanedUrl = cleanUrl(match[0]);
         matches.push({
             type: 'url',
-            text: match[0],
+            text: cleanedUrl,
             index: match.index,
             endIndex: match.index + match[0].length
         });
@@ -127,6 +134,9 @@ const Chatbot = () => {
     const inputRef = useRef(null);
     const windowRef = useRef(null);
 
+    // Check if this is the first interaction (only initial bot message exists)
+    const isFirstInteraction = messages.length === 1 && messages[0].sender === 'bot';
+
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
     };
@@ -158,12 +168,18 @@ const Chatbot = () => {
         };
     }, [isOpen]);
 
-    const sendMessage = async () => {
-        if (!inputValue.trim() || isLoading) return;
+    const handleOptionClick = (optionText) => {
+        setInputValue(optionText);
+        sendMessage(optionText);
+    };
+
+    const sendMessage = async (messageText = null) => {
+        const textToSend = messageText || inputValue;
+        if (!textToSend.trim() || isLoading) return;
 
         const userMessage = {
             id: Date.now(),
-            text: inputValue,
+            text: textToSend,
             sender: 'user',
             timestamp: new Date()
         };
@@ -179,7 +195,7 @@ const Chatbot = () => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    chatInput: inputValue,
+                    chatInput: textToSend,
                     sessionId: sessionId
                 })
             });
@@ -309,6 +325,42 @@ const Chatbot = () => {
                             </div>
                         </div>
                     ))}
+
+                    {/* Initial option buttons - only show on first interaction */}
+                    {isFirstInteraction && (
+                        <div className="initial-options">
+                            <button
+                                className="option-button"
+                                onClick={() => handleOptionClick("How can I schedule a demo")}
+                            >
+                                Schedule a Demo
+                            </button>
+
+                            <button
+                                className="option-button"
+                                onClick={() => handleOptionClick("Can it connect to my existing systems?")}
+                            >
+                                Can it connect to my existing systems?
+                            </button> <button
+                                className="option-button"
+                                onClick={() => handleOptionClick("How fast can I get started?")}
+                            >
+                                How fast can I get started?
+                            </button>
+                            <button
+                                className="option-button"
+                                onClick={() => handleOptionClick("Is it secure and compliant?")}
+                            >
+                                Is it secure and compliant?
+                            </button>
+
+
+
+
+
+                        </div>
+                    )}
+
                     {isLoading && (
                         <div className="message bot">
                             <div className="message-content">
