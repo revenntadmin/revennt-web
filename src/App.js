@@ -39,7 +39,7 @@ function AppContent() {
           <>
             <Hero />
             <Services />
-            <Features />
+            {/* <Features /> */}
             <Contact />
           </>
         } />

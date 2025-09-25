@@ -53,27 +53,27 @@ const Services = () => {
         },
         {
             title: 'Enterprise Security',
-            description: 'Bank-level security with end-to-end encryption and compliance.',
+            description: 'Runs locally or on cloud for optimal data sovereignty and security.',
             features: [
-                'SOC 2 Type II certified',
-                'End-to-end encryption',
-                'Role-based access control',
-                'Audit trails and monitoring',
-                'GDPR and HIPAA compliance'
+                'Complete local data storage',
+                'No third-party data sharing',
+                'Full data sovereignty control',
+                'Flexible deployment options',
+                'Maximum privacy protection'
             ],
-            demo: 'All data is encrypted in transit and at rest, with full audit logs for compliance requirements.'
+            demo: 'Your data stays completely local and is never shared with any third parties, giving you complete control over your information.'
         },
         {
-            title: 'Analytics & Insights',
-            description: 'Comprehensive analytics dashboard with performance metrics and ROI tracking.',
+            title: 'LLM Selection & Multi-Agent Deployment',
+            description: 'Choose from any LLM and deploy multiple agents for different tasks with expert guidance.',
             features: [
-                'Real-time performance monitoring',
-                'Usage analytics and patterns',
-                'ROI calculation and reporting',
-                'Custom metric tracking',
-                'Predictive analytics'
+                'Select any LLM that fits your needs',
+                'Deploy multiple specialized agents',
+                'Expert recommendations for your use case',
+                'Custom agent configurations',
+                'Seamless integration with your preferred models'
             ],
-            demo: 'View detailed analytics showing agent performance, user satisfaction, and business impact metrics.'
+            demo: 'We help you choose the perfect LLM for your specific requirements and deploy multiple agents to handle different aspects of your workflow.'
         }
     ];
 
@@ -125,7 +125,7 @@ const Services = () => {
                             </div>
 
                             <div className="capability-demo">
-                                <h4>Live Demo:</h4>
+                                <h4>Example:</h4>
                                 <p>{capability.demo}</p>
                             </div>
                         </div>
@@ -152,7 +152,7 @@ const Services = () => {
                 <div className="services-cta">
                     <h3>Ready to See It in Action?</h3>
                     <p>Schedule a personalized demo to see how our AI agents can transform your specific workflows.</p>
-                    <button className="btn btn-primary">Schedule Demo</button>
+                    <a href='https://calendly.com/revennt-llc/30min' target='_blank' className="btn btn-primary">Schedule Demo</a>
                 </div>
             </div>
         </section>
